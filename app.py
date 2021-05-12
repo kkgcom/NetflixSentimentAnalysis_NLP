@@ -11,9 +11,10 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    in_features = [float(x) for x in request.form.values()]
-    final_features = [np.array(in_features)]
-    vec= vect.transform(final_features)
+    # in_features = [float(x) for x in request.form.values()]
+    # final_features = [np.array(in_features)]
+    inpt=request.form.get('review')
+    vec= vect.transform([inpt])
     prediction = clf.predict(vec)
     output = 'good'
     if round(prediction[0],2)==1.0:

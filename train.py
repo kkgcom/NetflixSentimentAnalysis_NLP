@@ -87,6 +87,12 @@ joblib.dump(vectorizer , vectorizer_filename)
 vect = joblib.load('netflix_vector.pkl')
 clf = joblib.load('netflix_svm_model.pkl')
 
-# a = 'best'
+# a = 'best movie ever seen'
 # b = vect.transform([a])
+# pred=clf.predict(b)
+# if round(pred[0],2)==1.0:
+#     output = 'good'
+# else:
+#     output = 'bad' 
 # print(clf.predict(b))
+# print(output)
